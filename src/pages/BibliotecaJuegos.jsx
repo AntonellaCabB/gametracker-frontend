@@ -15,3 +15,15 @@ export default function BibliotecaJuegos() {
     </div>
   );
 }
+import TarjetaJuego from "../components/TarjetaJuego";
+// ...
+return (
+  <div>
+    <h2>Mi Biblioteca</h2>
+    <div style={{ display: "flex", gap: 15, flexWrap: "wrap" }}>
+      {juegos.map(j => (
+        <TarjetaJuego key={j._id} juego={j} />
+      ))}
+    </div>
+  </div>
+);
