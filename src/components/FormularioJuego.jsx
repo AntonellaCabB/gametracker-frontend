@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { uploadImage } from "../utils/uploadImage";
 
 export default function FormularioJuego({ modo, juego, onSubmit, onCancel }) {
   const [form, setForm] = useState({
@@ -101,13 +102,24 @@ export default function FormularioJuego({ modo, juego, onSubmit, onCancel }) {
           onChange={handleChange}
         />
 
-        <label>URL Imagen de portada *</label>
+        <label>Imagen de portada *</label>
         <input
-          type="text"
-          name="imagenPortada"
-          value={form.imagenPortada}
-          onChange={handleChange}
-        />
+        type="file"
+        accept="image/*"
+         onChange={async (e) => {
+         const file = e.target.files[0];
+         if (!file) return;
+
+         const url = await uploadImage(file);
+         setForm({ ...form, imagenPortada: url });
+
+         console.log("URL subida:", url);
+       }}
+/>
+
+     
+
+
 
         <label>Descripción *</label>
         <textarea

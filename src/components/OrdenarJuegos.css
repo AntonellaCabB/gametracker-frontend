@@ -1,0 +1,12 @@
+.ordenar-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.ordenar-container select {
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  width: 180px;
+}

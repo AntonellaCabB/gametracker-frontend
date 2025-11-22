@@ -1,0 +1,20 @@
+.filtros-container {
+  display: flex;
+  gap: 16px;
+  margin-top: 12px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.filtros-container div {
+  display: flex;
+  flex-direction: column;
+}
+
+.filtros-container input,
+.filtros-container select {
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  min-width: 150px;
+}

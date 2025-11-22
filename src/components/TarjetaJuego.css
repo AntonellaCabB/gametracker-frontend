@@ -1,26 +1,95 @@
-.tarjeta {
-  width: 240px;
-  background: #fafafa;
-  padding: 15px;
-  border-radius: 10px;
-  border: 1px solid #ddd;
-  text-align: center;
+/* ==============================
+   Tarjeta de Juego — Estilo Moderno
+   ============================== */
+
+.tarjeta-modern {
+  background: white;
+  border-radius: 14px;
+  padding: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-.tarjeta img {
+.tarjeta-modern:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+/* IMAGEN */
+.tarjeta-imagen {
   width: 100%;
   height: 160px;
   object-fit: cover;
-  border-radius: 8px;
+  border-radius: 10px;
+  background-color: #e5e7eb;
 }
 
-.botones {
+/* TITULO */
+.tarjeta-titulo {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 5px 0;
+}
+
+/* ESTADO */
+.tarjeta-estado {
+  margin-top: 6px;
+  font-size: 14px;
+  color: #374151;
+}
+
+/* BOTONES */
+.tarjeta-botones {
   display: flex;
-  justify-content: space-between;
-  margin-top: 10px;
+  gap: 8px;
+  margin-top: 12px;
 }
 
-.eliminar {
-  background: #e74c3c;
+/* BOTÓN PRINCIPAL */
+.btn-primary {
+  background: #4a6cf7;
   color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.btn-primary:hover {
+  background: #3b57d6;
+}
+
+/* BOTÓN SECUNDARIO */
+.btn-secondary {
+  background: #64748b;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.btn-secondary:hover {
+  filter: brightness(1.1);
+}
+
+/* BOTÓN PELIGRO */
+.btn-danger {
+  background: #dc2626;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.btn-danger:hover {
+  background: #b91c1c;
 }

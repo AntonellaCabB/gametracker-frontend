@@ -1,0 +1,13 @@
+.ordenar-resenas-container {
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.ordenar-resenas-container select {
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  width: 220px;
+}
