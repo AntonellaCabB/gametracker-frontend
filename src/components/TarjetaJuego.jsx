@@ -1,13 +1,27 @@
-export default function TarjetaJuego({ juego }) {
+import React from "react";
+import "./TarjetaJuego.css";
+
+export default function TarjetaJuego({ juego, onEditar, onEliminar }) {
   return (
-    <div style={{ border: "1px solid #ccc", padding: 10, width: 220 }}>
-      <img
-        src={juego.imagen || "https://via.placeholder.com/200"}
-        style={{ width: "100%" }}
-      />
+    <div className="tarjeta">
+
+      <img src={juego.imagenPortada} alt={juego.titulo} />
+
       <h3>{juego.titulo}</h3>
-      <p>Género: {juego.genero}</p>
-      <p>Rating: {juego.rating}</p>
+
+      <p><strong>Género:</strong> {juego.genero}</p>
+      <p><strong>Plataforma:</strong> {juego.plataforma}</p>
+      <p><strong>Año:</strong> {juego.añoLanzamiento}</p>
+
+      <p>
+        <strong>Estado:</strong>{" "}
+        {juego.completado ? "Completado ✔" : "Pendiente ⏳"}
+      </p>
+
+      <div className="botones">
+        <button onClick={onEditar}>Editar</button>
+        <button onClick={onEliminar} className="eliminar">Eliminar</button>
+      </div>
     </div>
   );
 }
