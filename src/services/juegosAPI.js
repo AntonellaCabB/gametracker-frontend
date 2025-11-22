@@ -9,3 +9,15 @@ export async function obtenerJuegos() {
     return [];
   }
 }
+export async function crearJuego(data) {
+  try {
+    const res = await fetch(`${API_URL}/juegos`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    });
+    return await res.json();
+  } catch (error) {
+    console.error("Error creando juego", error);
+  }
+}
