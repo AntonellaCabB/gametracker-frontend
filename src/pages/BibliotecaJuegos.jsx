@@ -27,3 +27,8 @@ return (
     </div>
   </div>
 );
+import FormularioJuego from "../components/FormularioJuego";
+
+<FormularioJuego
+  onAdd={(nuevo) => setJuegos([nuevo, ...juegos])}
+/>
